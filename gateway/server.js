@@ -56,10 +56,10 @@ import crypto from "node:crypto";
 import os from "node:os";
 import client from "prom-client";
 
-const PORT = Number(process.env.PORT ?? 3000);
-const STORE_URL = process.env.STORE_URL ?? "http://localhost:4000";
+const PORT = Number(process.env.PORT );
+const STORE_URL = process.env.STORE_URL ;
 // Sans nouvelles d'un worker depuis ce délai (pod tué, nœud perdu…), sa galaxie redevient libre.
-const LEASE_MS = Number(process.env.LEASE_MS ?? 15000);
+const LEASE_MS = Number(process.env.LEASE_MS );
 const MAX_N = 20000;
 const MODELS = ["disque", "elliptique", "anneau", "collision", "random", "plummer", "double-spirale"];
 const SPACING = 12; // distance entre deux cases de l'univers
